@@ -7,10 +7,6 @@ from gi.repository import Gst, GObject, GLib
 Gst.init(None)
 GObject.threads_init()
 
-# Registramos los elementos de cámara de Raspberry Pi
-Gst.ElementFactory.register(Gst.ElementFactory.find("libcamerasrc"), 1)
-Gst.ElementFactory.register(Gst.ElementFactory.find("RaspiCamSrc"), 1)
-
 # Creamos el pipeline de GStreamer
 pipeline = Gst.Pipeline()
 
