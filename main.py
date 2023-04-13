@@ -14,6 +14,7 @@ pipeline = Gst.Pipeline()
 # Creamos los elementos necesarios
 camerasrc = Gst.ElementFactory.make('libcamerasrc', 'camera-source')
 # camerasrc.set_property('sensor-id', 0)
+camerasrc.set_property('format', 'BGR')
 videoscale = Gst.ElementFactory.make('videoscale', 'video-scaler')
 capsfilter = Gst.ElementFactory.make('capsfilter', 'capsfilter')
 caps = Gst.Caps.from_string('video/x-raw,width=640,height=480')
